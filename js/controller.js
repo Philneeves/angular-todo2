@@ -7,16 +7,11 @@ angular.module('RouteControllers', [])
 		$scope.registrationUser = {};
 	var URL = "https://morning-castle-91468.herokuapp.com/";
 
-	var authStorage = {
-		name: "StorageTest"
-	};
-
-	store.set('obj', authStorage);
-
 	$scope.login = function() {
 		UserAPIService.callAPI(URL + "accounts/api-token-auth/", $scope.data).then(function(results) {
 			$scope.token = results.data.token;
-			console.log($scope.token);
+			store.set('username', $scope.registrationUser.username);
+			store.set('authToken', $scope.token);
 		}).catch(function(err) {
 			console.log(err.data);
 		});
@@ -30,7 +25,7 @@ angular.module('RouteControllers', [])
 				UserAPIService.callAPI(URL + "accounts/register/", $scope.registrationUser).then(function(results) {
 					$scope.data = results.data;
 					alert("You have successfully registered to Angular Todo2");
-					alert("Hello" + " " + $scope.registrationUser.username + "!" + "Welcome to your Todo2 Task Manager!");
+					alert("Hello" + " " + $scope.registrationUser.username + "!" + " " + "Welcome to your Todo2 Task Manager!");
 					console.log($scope.registrationUser.username + " " + $scope.registrationUser.password);
 					$scope.login();
 				}).catch(function(err) {
