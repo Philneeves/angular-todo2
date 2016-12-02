@@ -12,6 +12,10 @@
 				<td>{{todo.title}}</td>
 				<td>{{todo.description}}</td>
 				<td>{{todo.status}}</td>
+				<td>
+					<button ng-click="editTodo(id)"><span class="glyphicon glyphicon-edit"></span></button>
+					<button ng-click="deleteTodo(id)"><span class="glyphicon glyphicon-trash"></span></button>
+				</td>
 			</tr>
 		</tbody>
 	</table>
