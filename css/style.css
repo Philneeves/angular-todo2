@@ -15,7 +15,7 @@ img {
 }
 
 @media (max-width: 768px) {
-    .navbar-fixed-top {
+    nav.navbar-fixed-top {
     	position: relative;
     }
 }
