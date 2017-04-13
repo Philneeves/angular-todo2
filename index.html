@@ -4,14 +4,15 @@
 	<title>Angular Todo2</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Gochi+Hand">
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 	<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
 	<script type="text/javascript" src="bower_components/a0-angular-storage/dist/angular-storage.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Gochi+Hand">
+	
 </head>
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -40,12 +41,32 @@
 		</div>
 		</div>
 	</nav>
+	<div ng-controller="CollapseDemoCtrl">
+	<p>Resize window to less than 768 pixels to display mobile menu toggle button.</p>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" ng-click="isNavCollapsed = !isNavCollapsed">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">A menu</a>
+		</div>
+		<div class="collapse navbar-collapse" uib-collapse="isNavCollapsed">
+			<ul class="nav navbar-nav">
+				<li><a href="#/accounts/register">Link 1</a></li>
+				<li><a href="#/accounts/login">Link 2</a></li>
+			</ul>
+		</div>
+	</nav>
 	<div ng-view>
 		
 	</div>
-</body>
 <script src='js/app.js'></script>
 <script src='js/controller.js'></script>
 <script src='js/service.js'></script>
 <script src='js/directive.js'></script>
+</body>
+
 </html>
