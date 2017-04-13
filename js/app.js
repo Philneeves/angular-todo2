@@ -1,4 +1,4 @@
-angular.module('TodoApp', ['ngRoute', 'angular-storage', 'RouteControllers', 'UserService', 'TodoService', 'TodoDirective', 'ngAnimate', 'ngSanitize', 'ui.bootstrap']);
+angular.module('TodoApp', ['ngRoute', 'angular-storage', 'RouteControllers', 'UserService', 'TodoService', 'TodoDirective']);
 
 angular.module('TodoApp').config(function($routeProvider) {
 
@@ -27,3 +27,5 @@ angular.module('TodoApp').config(function($routeProvider) {
 		controller: 'EditTodoController'
 	});
 });
+
+angular.module('ui.bootstrap.demo', ['ngAnimate', 'ngSanitize', 'ui.bootstrap']);
