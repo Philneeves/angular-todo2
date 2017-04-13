@@ -130,7 +130,7 @@ angular.module('RouteControllers', [])
 			}
 		}
 	})
-	.controller('CollapseDemoCtrl', function ($scope) {
+	.controller('CollapseCtrl', function ($scope) {
 	  $scope.isNavCollapsed = true;
 	  $scope.isCollapsed = false;
 	  $scope.isCollapsedHorizontal = false;

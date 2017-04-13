@@ -14,7 +14,7 @@ img {
 	margin-left: 30%;
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     nav.navbar-fixed-top {
     	position: relative;
     }
@@ -22,4 +22,4 @@ img {
     body {
     	padding-top: 0px;
     }
-}
+}*/
